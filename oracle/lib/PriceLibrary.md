@@ -5,20 +5,20 @@
 
 
 # Functions:
-- [`pairInitialized(address PancakeSwapFactory, address token, address weth)`](#PriceLibrary-pairInitialized-address-address-address-)
+- [`pairInitialized(address PancakeSwapFactory, address token, address wBNB)`](#PriceLibrary-pairInitialized-address-address-address-)
 - [`observePrice(address PancakeSwapFactory, address tokenIn, address quoteToken)`](#PriceLibrary-observePrice-address-address-address-)
-- [`observeTwoWayPrice(address PancakeSwapFactory, address token, address weth)`](#PriceLibrary-observeTwoWayPrice-address-address-address-)
+- [`observeTwoWayPrice(address PancakeSwapFactory, address token, address wBNB)`](#PriceLibrary-observeTwoWayPrice-address-address-address-)
 - [`computeTwoWayAveragePrice(struct PriceLibrary.PriceObservation observation1, struct PriceLibrary.PriceObservation observation2)`](#PriceLibrary-computeTwoWayAveragePrice-struct-PriceLibrary-PriceObservation-struct-PriceLibrary-PriceObservation-)
 - [`computeAveragePrice(uint32 timestampStart, uint224 priceCumulativeStart, uint32 timestampEnd, uint224 priceCumulativeEnd)`](#PriceLibrary-computeAveragePrice-uint32-uint224-uint32-uint224-)
 - [`computeAverageTokenPrice(struct PriceLibrary.PriceObservation observation1, struct PriceLibrary.PriceObservation observation2)`](#PriceLibrary-computeAverageTokenPrice-struct-PriceLibrary-PriceObservation-struct-PriceLibrary-PriceObservation-)
 - [`computeAverageEthPrice(struct PriceLibrary.PriceObservation observation1, struct PriceLibrary.PriceObservation observation2)`](#PriceLibrary-computeAverageEthPrice-struct-PriceLibrary-PriceObservation-struct-PriceLibrary-PriceObservation-)
 - [`computeAverageEthForTokens(struct PriceLibrary.TwoWayAveragePrice prices, uint256 tokenAmount)`](#PriceLibrary-computeAverageEthForTokens-struct-PriceLibrary-TwoWayAveragePrice-uint256-)
-- [`computeAverageTokensForEth(struct PriceLibrary.TwoWayAveragePrice prices, uint256 wethAmount)`](#PriceLibrary-computeAverageTokensForEth-struct-PriceLibrary-TwoWayAveragePrice-uint256-)
+- [`computeAverageTokensForEth(struct PriceLibrary.TwoWayAveragePrice prices, uint256 wBNBAmount)`](#PriceLibrary-computeAverageTokensForEth-struct-PriceLibrary-TwoWayAveragePrice-uint256-)
 
 ## <a id='PriceLibrary-pairInitialized-address-address-address-'></a> `pairInitialized`
 
 ```
-function pairInitialized(address PancakeSwapFactory, address token, address weth) returns (bool)
+function pairInitialized(address PancakeSwapFactory, address token, address wBNB) returns (bool)
 ```
 
 
