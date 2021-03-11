@@ -2,15 +2,15 @@
 
 Contract for swapping undesired tokens to desired tokens for an index pool.
 
-This contract is deployed as a proxy for each index pool. When tokens are unbound from a pool, they are transferred to this contract and sold on UniSwap or to anyone who calls the contract in exchange for any token which is currently bound to its index pool and which has a desired weight about zero.
+This contract is deployed as a proxy for each index pool. When tokens are unbound from a pool, they are transferred to this contract and sold on PancakeSwap or to anyone who calls the contract in exchange for any token which is currently bound to its index pool and which has a desired weight about zero.
 
-It uses a short-term uniswap price oracle to price swaps and has a configurable slippage rate which determines the range around the moving average for which it will accept a trade.
+It uses a short-term PancakeSwap price oracle to price swaps and has a configurable slippage rate which determines the range around the moving average for which it will accept a trade.
 
 
 ## `constructor` 
 
 ```
-function constructor(contract IUniswapV2Router02 uniswapRouter, contract UniSwapV2PriceOracle oracle, address controller)
+function constructor(contract IPancakeSwapV2Router02 PancakeSwapRouter, contract PancakeSwapV2PriceOracle oracle, address controller)
 ```
 
 # Controls
@@ -44,7 +44,7 @@ function emergencyExecuteSwapTokensForExactTokens(address tokenIn, address token
 
 
 Emergency function that allows the controller to force a token
-sale through UniSwap. This exists in case of an emergency which
+sale through PancakeSwap. This exists in case of an emergency which
 demands immediate removal of a token.
 
 # Pool Interaction
@@ -57,7 +57,7 @@ function handleUnbindToken(address token, uint256 amount)
 
 Receive `amount` of `token` from the pool.
 
-# UniSwap Trades
+# PancakeSwap Trades
 
 ## `executeSwapTokensForExactTokens` 
 
@@ -67,7 +67,7 @@ function executeSwapTokensForExactTokens(address tokenIn, address tokenOut, uint
 
 
 
-Execute a trade with UniSwap to sell some tokens held by the contract
+Execute a trade with PancakeSwap to sell some tokens held by the contract
 for some tokens desired by the pool and pays the caller any tokens received
 above the minimum acceptable output.
 
@@ -80,7 +80,7 @@ function executeSwapExactTokensForTokens(address tokenIn, address tokenOut, uint
 
 
 
-Executes a trade with UniSwap to sell some tokens held by the contract
+Executes a trade with PancakeSwap to sell some tokens held by the contract
 for some tokens desired by the pool and pays the caller any tokens received
 above the minimum acceptable output.
 
