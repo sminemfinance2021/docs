@@ -11,8 +11,8 @@ The SMIN governance organization is responsible for:
 
 ## SMIN Token Distribution
 
-SMIN is the governance token for Indexed. The initial supply of 2,500,000 NDX will be distributed as follows:
-- 20% will be made available to the NDX treasury over the course of 9 months, beginning March 25, 2021.
+SMIN is the governance token for Sminem Finance. The initial supply of 2,500,000 SMIN will be distributed as follows:
+- 20% will be made available to the SMIN treasury over the course of 9 months, beginning March 25, 2021.
 - 48% will be distributed through liquidity mining to users who stake index tokens.
 - 7% will go to the founders, investors and future team members, subject to vesting periods.
 - 14% will be distributed via the treasury in a manner to be determined by governance.
