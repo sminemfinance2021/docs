@@ -1,12 +1,6 @@
-# Security
-
-Because of limited availability, the NDX contracts have not been audited by an established security firm; however, the core contracts have been audited by two independent security experts: Daniel Luca, a former auditor for Consensys diligence, and Mudit Gupta, the lead blockchain engineer at Polymath.
-- [Daniel Luca's Audit Report](https://github.com/monoceros-alpha/audit-indexed-finance-2020-10)
-- [Mudit Gupta's Audit Report](https://github.com/maxsam4/indexed-finance-review)
-
 ## Risks
 
-It is important for users to understand that the NDX governance organization, which the team will hold majority control of until the initial distribution is complete, has the ability to change the proxy implementation for most core contracts in the Indexed protocol. All governance transactions are subject to a two day time lock, so careful users should [monitor proposals submitted to the governor contract](https://etherscan.io/address/0x95129751769f99CC39824a0793eF4933DD8Bb74B#code).
+It is important for users to understand that the SMIN governance organization, which the team will hold majority control of until the initial distribution is complete, has the ability to change the proxy implementation for most core contracts in the Indexed protocol. All governance transactions are subject to a two day time lock, so careful users should monitor proposals submitted to the governor contract.
 
 ## Warning
 
