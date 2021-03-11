@@ -1,39 +1,39 @@
-# `IndexedUniswapV2Oracle`
+# `SmindexPancakeSwapV2Oracle`
 
 
 
 
 
 # Functions:
-- [`constructor(address uniswapFactory, address weth)`](#IndexedUniswapV2Oracle-constructor-address-address-)
-- [`updatePrice(address token)`](#IndexedUniswapV2Oracle-updatePrice-address-)
-- [`updatePrices(address[] tokens)`](#IndexedUniswapV2Oracle-updatePrices-address---)
-- [`hasPriceObservationInWindow(address token, uint256 priceKey)`](#IndexedUniswapV2Oracle-hasPriceObservationInWindow-address-uint256-)
-- [`getPriceObservationInWindow(address token, uint256 priceKey)`](#IndexedUniswapV2Oracle-getPriceObservationInWindow-address-uint256-)
-- [`getPriceObservationsInRange(address token, uint256 timeFrom, uint256 timeTo)`](#IndexedUniswapV2Oracle-getPriceObservationsInRange-address-uint256-uint256-)
-- [`canUpdatePrice(address token)`](#IndexedUniswapV2Oracle-canUpdatePrice-address-)
-- [`canUpdatePrices(address[] tokens)`](#IndexedUniswapV2Oracle-canUpdatePrices-address---)
-- [`computeTwoWayAveragePrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#IndexedUniswapV2Oracle-computeTwoWayAveragePrice-address-uint256-uint256-)
-- [`computeAverageTokenPrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#IndexedUniswapV2Oracle-computeAverageTokenPrice-address-uint256-uint256-)
-- [`computeAverageEthPrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#IndexedUniswapV2Oracle-computeAverageEthPrice-address-uint256-uint256-)
-- [`computeTwoWayAveragePrices(address[] tokens, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#IndexedUniswapV2Oracle-computeTwoWayAveragePrices-address---uint256-uint256-)
-- [`computeAverageTokenPrices(address[] tokens, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#IndexedUniswapV2Oracle-computeAverageTokenPrices-address---uint256-uint256-)
-- [`computeAverageEthPrices(address[] tokens, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#IndexedUniswapV2Oracle-computeAverageEthPrices-address---uint256-uint256-)
-- [`computeAverageEthForTokens(address token, uint256 tokenAmount, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#IndexedUniswapV2Oracle-computeAverageEthForTokens-address-uint256-uint256-uint256-)
-- [`computeAverageTokensForEth(address token, uint256 wethAmount, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#IndexedUniswapV2Oracle-computeAverageTokensForEth-address-uint256-uint256-uint256-)
-- [`computeAverageEthForTokens(address[] tokens, uint256[] tokenAmounts, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#IndexedUniswapV2Oracle-computeAverageEthForTokens-address---uint256---uint256-uint256-)
-- [`computeAverageTokensForEth(address[] tokens, uint256[] wethAmounts, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#IndexedUniswapV2Oracle-computeAverageTokensForEth-address---uint256---uint256-uint256-)
-- [`_getTwoWayPrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#IndexedUniswapV2Oracle-_getTwoWayPrice-address-uint256-uint256-)
-- [`_getTokenPrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#IndexedUniswapV2Oracle-_getTokenPrice-address-uint256-uint256-)
-- [`_getEthPrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#IndexedUniswapV2Oracle-_getEthPrice-address-uint256-uint256-)
+- [`constructor(address uniswapFactory, address weth)`](#SmindexPancakeSwapV2Oracle-constructor-address-address-)
+- [`updatePrice(address token)`](#SmindexPancakeSwapV2Oracle-updatePrice-address-)
+- [`updatePrices(address[] tokens)`](#SmindexPancakeSwapV2Oracle-updatePrices-address---)
+- [`hasPriceObservationInWindow(address token, uint256 priceKey)`](#SmindexPancakeSwapV2Oracle-hasPriceObservationInWindow-address-uint256-)
+- [`getPriceObservationInWindow(address token, uint256 priceKey)`](#SmindexPancakeSwapV2Oracle-getPriceObservationInWindow-address-uint256-)
+- [`getPriceObservationsInRange(address token, uint256 timeFrom, uint256 timeTo)`](#SmindexPancakeSwapV2Oracle-getPriceObservationsInRange-address-uint256-uint256-)
+- [`canUpdatePrice(address token)`](#SmindexPancakeSwapV2Oracle-canUpdatePrice-address-)
+- [`canUpdatePrices(address[] tokens)`](#SmindexPancakeSwapV2Oracle-canUpdatePrices-address---)
+- [`computeTwoWayAveragePrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwappV2Oracle-computeTwoWayAveragePrice-address-uint256-uint256-)
+- [`computeAverageTokenPrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-computeAverageTokenPrice-address-uint256-uint256-)
+- [`computeAverageEthPrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-computeAverageEthPrice-address-uint256-uint256-)
+- [`computeTwoWayAveragePrices(address[] tokens, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-computeTwoWayAveragePrices-address---uint256-uint256-)
+- [`computeAverageTokenPrices(address[] tokens, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-computeAverageTokenPrices-address---uint256-uint256-)
+- [`computeAverageEthPrices(address[] tokens, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-computeAverageEthPrices-address---uint256-uint256-)
+- [`computeAverageEthForTokens(address token, uint256 tokenAmount, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-computeAverageEthForTokens-address-uint256-uint256-uint256-)
+- [`computeAverageTokensForEth(address token, uint256 wethAmount, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-computeAverageTokensForEth-address-uint256-uint256-uint256-)
+- [`computeAverageEthForTokens(address[] tokens, uint256[] tokenAmounts, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-computeAverageEthForTokens-address---uint256---uint256-uint256-)
+- [`computeAverageTokensForEth(address[] tokens, uint256[] wethAmounts, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-computeAverageTokensForEth-address---uint256---uint256-uint256-)
+- [`_getTwoWayPrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-_getTwoWayPrice-address-uint256-uint256-)
+- [`_getTokenPrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-_getTokenPrice-address-uint256-uint256-)
+- [`_getEthPrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-_getEthPrice-address-uint256-uint256-)
 
-## <a id='IndexedUniswapV2Oracle-constructor-address-address-'></a> `constructor`
+## <a id='SmindexPancakeSwapV2Oracle-constructor-address-address-'></a> `constructor`
 
 ```
 function constructor(address uniswapFactory, address weth)
 ```
 
-## <a id='IndexedUniswapV2Oracle-updatePrice-address-'></a> `updatePrice`
+## <a id='SmindexPancakeSwapV2Oracle-updatePrice-address-'></a> `updatePrice`
 
 ```
 function updatePrice(address token) returns (bool)
@@ -48,7 +48,7 @@ indicating whether it was updated.
 and at least 30 minutes have passed since the last observation.
 
 
-## <a id='IndexedUniswapV2Oracle-updatePrices-address---'></a> `updatePrices`
+## <a id='SmindexPancakeSwapV2Oracle-updatePrices-address---'></a> `updatePrices`
 
 ```
 function updatePrices(address[] tokens) returns (bool[] pricesUpdated)
@@ -61,7 +61,7 @@ array indicating which tokens had their prices updated.
 and at least 30 minutes have passed since the last observation.
 
 
-## <a id='IndexedUniswapV2Oracle-hasPriceObservationInWindow-address-uint256-'></a> `hasPriceObservationInWindow`
+## <a id='SmindexPancakeSwapV2Oracle-hasPriceObservationInWindow-address-uint256-'></a> `hasPriceObservationInWindow`
 
 ```
 function hasPriceObservationInWindow(address token, uint256 priceKey) returns (bool)
@@ -77,7 +77,7 @@ Returns a boolean indicating whether a price was recorded for `token` at `priceK
 
 - `priceKey`: Index of the hour to check
 
-## <a id='IndexedUniswapV2Oracle-getPriceObservationInWindow-address-uint256-'></a> `getPriceObservationInWindow`
+## <a id='SmindexPancakeSwapV2Oracle-getPriceObservationInWindow-address-uint256-'></a> `getPriceObservationInWindow`
 
 ```
 function getPriceObservationInWindow(address token, uint256 priceKey) returns (struct PriceLibrary.PriceObservation observation)
@@ -92,7 +92,7 @@ Reverts if no prices have been recorded for that key.
 
 - `priceKey`: Index of the hour to query
 
-## <a id='IndexedUniswapV2Oracle-getPriceObservationsInRange-address-uint256-uint256-'></a> `getPriceObservationsInRange`
+## <a id='SmindexPancakeSwapV2Oracle-getPriceObservationsInRange-address-uint256-uint256-'></a> `getPriceObservationsInRange`
 
 ```
 function getPriceObservationsInRange(address token, uint256 timeFrom, uint256 timeTo) returns (struct PriceLibrary.PriceObservation[] prices)
@@ -101,7 +101,7 @@ function getPriceObservationsInRange(address token, uint256 timeFrom, uint256 ti
 Returns all price observations for `token` recorded between `timeFrom` and `timeTo`.
 
 
-## <a id='IndexedUniswapV2Oracle-canUpdatePrice-address-'></a> `canUpdatePrice`
+## <a id='SmindexPancakeSwapV2Oracle-canUpdatePrice-address-'></a> `canUpdatePrice`
 
 ```
 function canUpdatePrice(address token) returns (bool)
@@ -114,7 +114,7 @@ Returns a boolean indicating whether the price of `token` can be updated.
 and at least 30 minutes have passed since the last observation.
 
 
-## <a id='IndexedUniswapV2Oracle-canUpdatePrices-address---'></a> `canUpdatePrices`
+## <a id='SmindexPancakeSwapV2Oracle-canUpdatePrices-address---'></a> `canUpdatePrices`
 
 ```
 function canUpdatePrices(address[] tokens) returns (bool[] canUpdateArr)
@@ -127,7 +127,7 @@ Returns a boolean array indicating whether the price of each token in
 and at least 30 minutes have passed since the last observation.
 
 
-## <a id='IndexedUniswapV2Oracle-computeTwoWayAveragePrice-address-uint256-uint256-'></a> `computeTwoWayAveragePrice`
+## <a id='SmindexPancakeSwapV2Oracle-computeTwoWayAveragePrice-address-uint256-uint256-'></a> `computeTwoWayAveragePrice`
 
 ```
 function computeTwoWayAveragePrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed) returns (struct PriceLibrary.TwoWayAveragePrice)
@@ -149,7 +149,7 @@ it is less than one hour.
 it is less than one hour.
 
 
-## <a id='IndexedUniswapV2Oracle-computeAverageTokenPrice-address-uint256-uint256-'></a> `computeAverageTokenPrice`
+## <a id='SmindexPancakeSwapV2Oracle-computeAverageTokenPrice-address-uint256-uint256-'></a> `computeAverageTokenPrice`
 
 ```
 function computeAverageTokenPrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed) returns (struct FixedPoint.uq112x112 priceAverage)
@@ -171,7 +171,7 @@ it is less than one hour.
 it is less than one hour.
 
 
-## <a id='IndexedUniswapV2Oracle-computeAverageEthPrice-address-uint256-uint256-'></a> `computeAverageEthPrice`
+## <a id='SmindexPancakeSwapV2Oracle-computeAverageEthPrice-address-uint256-uint256-'></a> `computeAverageEthPrice`
 
 ```
 function computeAverageEthPrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed) returns (struct FixedPoint.uq112x112 priceAverage)
@@ -191,7 +191,7 @@ it is less than one hour.
 it is less than one hour.
 
 
-## <a id='IndexedUniswapV2Oracle-computeTwoWayAveragePrices-address---uint256-uint256-'></a> `computeTwoWayAveragePrices`
+## <a id='SmindexPancakeSwapV2Oracle-computeTwoWayAveragePrices-address---uint256-uint256-'></a> `computeTwoWayAveragePrices`
 
 ```
 function computeTwoWayAveragePrices(address[] tokens, uint256 minTimeElapsed, uint256 maxTimeElapsed) returns (struct PriceLibrary.TwoWayAveragePrice[] prices)
@@ -212,7 +212,7 @@ it is less than one hour.
 it is less than one hour.
 
 
-## <a id='IndexedUniswapV2Oracle-computeAverageTokenPrices-address---uint256-uint256-'></a> `computeAverageTokenPrices`
+## <a id='SmindexPancakeSwapV2Oracle-computeAverageTokenPrices-address---uint256-uint256-'></a> `computeAverageTokenPrices`
 
 ```
 function computeAverageTokenPrices(address[] tokens, uint256 minTimeElapsed, uint256 maxTimeElapsed) returns (struct FixedPoint.uq112x112[] averagePrices)
@@ -232,7 +232,7 @@ it is less than one hour.
 it is less than one hour.
 
 
-## <a id='IndexedUniswapV2Oracle-computeAverageEthPrices-address---uint256-uint256-'></a> `computeAverageEthPrices`
+## <a id='SmindexPancakeSwapV2Oracle-computeAverageBNBPrices-address---uint256-uint256-'></a> `computeAverageEthPrices`
 
 ```
 function computeAverageEthPrices(address[] tokens, uint256 minTimeElapsed, uint256 maxTimeElapsed) returns (struct FixedPoint.uq112x112[] averagePrices)
@@ -253,7 +253,7 @@ it is less than one hour.
 it is less than one hour.
 
 
-## <a id='IndexedUniswapV2Oracle-computeAverageEthForTokens-address-uint256-uint256-uint256-'></a> `computeAverageEthForTokens`
+## <a id='SmindexPancakeSwapV2Oracle-computeAverageEthForTokens-address-uint256-uint256-uint256-'></a> `computeAverageEthForTokens`
 
 ```
 function computeAverageEthForTokens(address token, uint256 tokenAmount, uint256 minTimeElapsed, uint256 maxTimeElapsed) returns (uint144)
@@ -271,7 +271,7 @@ it is less than one hour.
 it is less than one hour.
 
 
-## <a id='IndexedUniswapV2Oracle-computeAverageTokensForEth-address-uint256-uint256-uint256-'></a> `computeAverageTokensForEth`
+## <a id='SmindexPancakeSwapV2Oracle-computeAverageTokensForBNB-address-uint256-uint256-uint256-'></a> `computeAverageTokensForEth`
 
 ```
 function computeAverageTokensForEth(address token, uint256 wethAmount, uint256 minTimeElapsed, uint256 maxTimeElapsed) returns (uint144)
@@ -289,10 +289,10 @@ it is less than one hour.
 it is less than one hour.
 
 
-## <a id='IndexedUniswapV2Oracle-computeAverageEthForTokens-address---uint256---uint256-uint256-'></a> `computeAverageEthForTokens`
+## <a id='SmindexPancakeSwapV2Oracle-computeAverageEthForTokens-address---uint256---uint256-uint256-'></a> `computeAverageEthForTokens`
 
 ```
-function computeAverageEthForTokens(address[] tokens, uint256[] tokenAmounts, uint256 minTimeElapsed, uint256 maxTimeElapsed) returns (uint144[] averageValuesInWETH)
+function computeAverageEthForTokens(address[] tokens, uint256[] tokenAmounts, uint256 minTimeElapsed, uint256 maxTimeElapsed) returns (uint144[] averageValuesInWBNB)
 ```
 
 
@@ -309,10 +309,10 @@ it is less than one hour.
 it is less than one hour.
 
 
-## <a id='IndexedUniswapV2Oracle-computeAverageTokensForEth-address---uint256---uint256-uint256-'></a> `computeAverageTokensForEth`
+## <a id='SmindexPancakeSwapV2Oracle-computeAverageTokensForEth-address---uint256---uint256-uint256-'></a> `computeAverageTokensForEth`
 
 ```
-function computeAverageTokensForEth(address[] tokens, uint256[] wethAmounts, uint256 minTimeElapsed, uint256 maxTimeElapsed) returns (uint144[] averageValuesInWETH)
+function computeAverageTokensForEth(address[] tokens, uint256[] wethAmounts, uint256 minTimeElapsed, uint256 maxTimeElapsed) returns (uint144[] averageValuesInWBNB)
 ```
 
 
@@ -329,7 +329,7 @@ it is less than one hour.
 it is less than one hour.
 
 
-## <a id='IndexedUniswapV2Oracle-_getTwoWayPrice-address-uint256-uint256-'></a> `_getTwoWayPrice`
+## <a id='SmindexPancakeSwapV2Oracle-_getTwoWayPrice-address-uint256-uint256-'></a> `_getTwoWayPrice`
 
 ```
 function _getTwoWayPrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed) returns (struct PriceLibrary.TwoWayAveragePrice)
@@ -340,7 +340,7 @@ function _getTwoWayPrice(address token, uint256 minTimeElapsed, uint256 maxTimeE
 
 
 
-## <a id='IndexedUniswapV2Oracle-_getTokenPrice-address-uint256-uint256-'></a> `_getTokenPrice`
+## <a id='SmindexPancakeSwapV2Oracle-_getTokenPrice-address-uint256-uint256-'></a> `_getTokenPrice`
 
 ```
 function _getTokenPrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed) returns (struct FixedPoint.uq112x112)
@@ -351,7 +351,7 @@ function _getTokenPrice(address token, uint256 minTimeElapsed, uint256 maxTimeEl
 
 
 
-## <a id='IndexedUniswapV2Oracle-_getEthPrice-address-uint256-uint256-'></a> `_getEthPrice`
+## <a id='SmindexPancakeSwapV2Oracle-_getBNBPrice-address-uint256-uint256-'></a> `_getEthPrice`
 
 ```
 function _getEthPrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed) returns (struct FixedPoint.uq112x112)
