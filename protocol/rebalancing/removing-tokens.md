@@ -12,13 +12,13 @@ Currently, the only contract for handling unbound tokens is [UnboundTokenSeller.
 
 ### Token Pricing
 
-The token seller uses the [Uniswap price oracle](../price-oracles.md) to determine the hourly moving average prices of tokens being swapped. It is configured with a `premiumPercent` value that gives an advantage to token buyers by reducing the output value it expects for a given input value.
+The token seller uses the PancakeSwap oracles to determine the hourly moving average prices of tokens being swapped. It is configured with a `premiumPercent` value that gives an advantage to token buyers by reducing the output value it expects for a given input value.
 
-Example: if the seller has `premiumPercent = 5` and owns 10 A tokens with an average price of 1 ETH on UniSwap, and someone wants to purchase them for B tokens with an average price of 2 ETH on UniSwap, the contract will accept 4.75 B (worth 9.5 ETH) for 10 A (worth 10 ETH).
+Example: if the seller has `premiumPercent = 5` and owns 10 A tokens with an average price of 1 BNB on PancakeSwap, and someone wants to purchase them for B tokens with an average price of 2 BNB on PancakeSwap, the contract will accept 4.75 B (worth 9.5 BNB) for 10 A (worth 10 BNB).
 
-### UniSwap Trades
+### PancakeSwap Trades
 
-Users can call the contract to trigger a UniSwap trade between a token it holds and a token the pool will accept. For UniSwap trades, any output tokens the contract receives beyond the minimum are paid to the caller as a reward for triggering the swap.
+Users can call the contract to trigger a PancakeSwap trade between a token it holds and a token the pool will accept. For PancakeSwap trades, any output tokens the contract receives beyond the minimum are paid to the caller as a reward for triggering the swap.
 
 ### User Trades
 
