@@ -1,17 +1,17 @@
-# `IndexedPriceMapLibrary`
+# `SmindexPriceMapLibrary`
 
 # Functions:
-- [`toPriceKey(uint256 timestamp)`](#IndexedPriceMapLibrary-toPriceKey-uint256-)
-- [`timeElapsedSinceWindowStart(uint256 timestamp)`](#IndexedPriceMapLibrary-timeElapsedSinceWindowStart-uint256-)
-- [`writePriceObservation(struct IndexedPriceMapLibrary.IndexedPriceMap indexedPriceMap, struct PriceLibrary.PriceObservation observation)`](#IndexedPriceMapLibrary-writePriceObservation-struct-IndexedPriceMapLibrary-IndexedPriceMap-struct-PriceLibrary-PriceObservation-)
-- [`sufficientDelaySinceLastPrice(struct IndexedPriceMapLibrary.IndexedPriceMap indexedPriceMap, uint32 newTimestamp)`](#IndexedPriceMapLibrary-sufficientDelaySinceLastPrice-struct-IndexedPriceMapLibrary-IndexedPriceMap-uint32-)
-- [`canUpdatePrice(struct IndexedPriceMapLibrary.IndexedPriceMap indexedPriceMap, uint32 newTimestamp)`](#IndexedPriceMapLibrary-canUpdatePrice-struct-IndexedPriceMapLibrary-IndexedPriceMap-uint32-)
-- [`hasPriceInWindow(struct IndexedPriceMapLibrary.IndexedPriceMap indexedPriceMap, uint256 priceKey)`](#IndexedPriceMapLibrary-hasPriceInWindow-struct-IndexedPriceMapLibrary-IndexedPriceMap-uint256-)
-- [`getPriceInWindow(struct IndexedPriceMapLibrary.IndexedPriceMap indexedPriceMap, uint256 priceKey)`](#IndexedPriceMapLibrary-getPriceInWindow-struct-IndexedPriceMapLibrary-IndexedPriceMap-uint256-)
-- [`getPriceObservationsInRange(struct IndexedPriceMapLibrary.IndexedPriceMap indexedPriceMap, uint256 timeFrom, uint256 timeTo)`](#IndexedPriceMapLibrary-getPriceObservationsInRange-struct-IndexedPriceMapLibrary-IndexedPriceMap-uint256-uint256-)
-- [`getLastPriceObservation(struct IndexedPriceMapLibrary.IndexedPriceMap indexedPriceMap, uint256 timestamp, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#IndexedPriceMapLibrary-getLastPriceObservation-struct-IndexedPriceMapLibrary-IndexedPriceMap-uint256-uint256-uint256-)
+- [`toPriceKey(uint256 timestamp)`](#SmindexPriceMapLibrary-toPriceKey-uint256-)
+- [`timeElapsedSinceWindowStart(uint256 timestamp)`](#SmindexPriceMapLibrary-timeElapsedSinceWindowStart-uint256-)
+- [`writePriceObservation(struct SmindexPriceMapLibrary.IndexedPriceMap indexedPriceMap, struct PriceLibrary.PriceObservation observation)`](#IndexedPriceMapLibrary-writePriceObservation-struct-IndexedPriceMapLibrary-IndexedPriceMap-struct-PriceLibrary-PriceObservation-)
+- [`sufficientDelaySinceLastPrice(struct IndexedPriceMapLibrary.IndexedPriceMap indexedPriceMap, uint32 newTimestamp)`](#IndexedPriceMapLibrary-sufficientDelaySinceLastPrice-struct-SmindexPriceMapLibrary-IndexedPriceMap-uint32-)
+- [`canUpdatePrice(struct SmindexPriceMapLibrary.IndexedPriceMap indexedPriceMap, uint32 newTimestamp)`](#IndexedPriceMapLibrary-canUpdatePrice-struct-IndexedPriceMapLibrary-IndexedPriceMap-uint32-)
+- [`hasPriceInWindow(struct SmindexPriceMapLibrary.IndexedPriceMap indexedPriceMap, uint256 priceKey)`](#IndexedPriceMapLibrary-hasPriceInWindow-struct-IndexedPriceMapLibrary-IndexedPriceMap-uint256-)
+- [`getPriceInWindow(struct SmindexPriceMapLibrary.IndexedPriceMap indexedPriceMap, uint256 priceKey)`](#IndexedPriceMapLibrary-getPriceInWindow-struct-IndexedPriceMapLibrary-IndexedPriceMap-uint256-)
+- [`getPriceObservationsInRange(struct SmindexPriceMapLibrary.IndexedPriceMap indexedPriceMap, uint256 timeFrom, uint256 timeTo)`](#IndexedPriceMapLibrary-getPriceObservationsInRange-struct-SmindexPriceMapLibrary-IndexedPriceMap-uint256-uint256-)
+- [`getLastPriceObservation(struct SmindexPriceMapLibrary.IndexedPriceMap indexedPriceMap, uint256 timestamp, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPriceMapLibrary-getLastPriceObservation-struct-IndexedPriceMapLibrary-IndexedPriceMap-uint256-uint256-uint256-)
 
-## <a id='IndexedPriceMapLibrary-toPriceKey-uint256-'></a> `toPriceKey`
+## <a id='SmindexPriceMapLibrary-toPriceKey-uint256-'></a> `toPriceKey`
 
 ```
 function toPriceKey(uint256 timestamp) returns (uint256)
@@ -22,7 +22,7 @@ function toPriceKey(uint256 timestamp) returns (uint256)
 Returns the price key for `timestamp`, which is the hour index.
 
 
-## <a id='IndexedPriceMapLibrary-timeElapsedSinceWindowStart-uint256-'></a> `timeElapsedSinceWindowStart`
+## <a id='SmindexPriceMapLibrary-timeElapsedSinceWindowStart-uint256-'></a> `timeElapsedSinceWindowStart`
 
 ```
 function timeElapsedSinceWindowStart(uint256 timestamp) returns (uint256)
@@ -33,7 +33,7 @@ function timeElapsedSinceWindowStart(uint256 timestamp) returns (uint256)
 Returns the number of seconds that have passed since the beginning of the hour.
 
 
-## <a id='IndexedPriceMapLibrary-writePriceObservation-struct-IndexedPriceMapLibrary-IndexedPriceMap-struct-PriceLibrary-PriceObservation-'></a> `writePriceObservation`
+## <a id='SmindexPriceMapLibrary-writePriceObservation-struct-SmindexPriceMapLibrary-IndexedPriceMap-struct-PriceLibrary-PriceObservation-'></a> `writePriceObservation`
 
 ```
 function writePriceObservation(struct IndexedPriceMapLibrary.IndexedPriceMap indexedPriceMap, struct PriceLibrary.PriceObservation observation) returns (bool)
