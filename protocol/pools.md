@@ -25,7 +25,7 @@ $$ -->
 
 # Rebalancing
 
-The typical method for rebalancing a token portfolio is to sell and purchase sufficient amounts of each asset to reach the desired weights. This typically involves trading with on-chain exchanges or using an auction system. Any method of swapping on-chain to rebalance will cause some amount of loss for the pool, potentially quite a lot. On-chain exchanges are illiquid, and auctions on Ethereum [have a history of being exploited](https://forum.makerdao.com/t/black-thursday-response-thread/1433).
+The typical method for rebalancing a token portfolio is to sell and purchase sufficient amounts of each asset to reach the desired weights. This typically involves trading with on-chain exchanges or using an auction system. Any method of swapping on-chain to rebalance will cause some amount of loss for the pool, potentially quite a lot. On-chain exchanges are illiquid, and auctions on PancakeSwap [have a history of being exploited](https://coinmarketcap.com/headlines/news/meerkat-finance-rug-pull/).
 
 Index pools rebalance themselves over time by creating small arbitrage opportunities that incentivize traders to gradually adjust token balances and weights. As tokens are swapped, their weights move slightly toward the targets set by the pool controller. This weight adjustment occurs at a maximum of once per hour in order to create small arbitrage opportunities over time that eventually bring the portfolio composition in line with the targets.
 
@@ -37,7 +37,7 @@ For further details on the rebalancing process, see [Rebalancing](./rebalancing/
 
 **Abnormal token implementations**
 
-Tokens that have internal transfer fees or other non-standard balance updates may create arbitrage opportunities. For now, these tokens should not be used in Indexed pools. Indexed pools do not have the same ERC20 restrictions on return values as Balancer pools, as the pool contract uses methods from OpenZeppelin's `SafeERC20` library.
+Tokens that have internal transfer fees or other non-standard balance updates may create arbitrage opportunities. For now, these tokens should not be used in Indexed pools. Indexed pools do not have the same BEP20 restrictions on return values as Balancer pools, as the pool contract uses methods from OpenZeppelin's `SafeERC20` library.
 
 **Permanent loss for some liquidity providers due to unbound token handling**
 
