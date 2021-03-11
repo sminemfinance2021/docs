@@ -5,9 +5,9 @@
 
 
 # Functions:
-- [`pairInitialized(address uniswapFactory, address token, address weth)`](#PriceLibrary-pairInitialized-address-address-address-)
-- [`observePrice(address uniswapFactory, address tokenIn, address quoteToken)`](#PriceLibrary-observePrice-address-address-address-)
-- [`observeTwoWayPrice(address uniswapFactory, address token, address weth)`](#PriceLibrary-observeTwoWayPrice-address-address-address-)
+- [`pairInitialized(address PancakeSwapFactory, address token, address weth)`](#PriceLibrary-pairInitialized-address-address-address-)
+- [`observePrice(address PancakeSwapFactory, address tokenIn, address quoteToken)`](#PriceLibrary-observePrice-address-address-address-)
+- [`observeTwoWayPrice(address PancakeSwapFactory, address token, address weth)`](#PriceLibrary-observeTwoWayPrice-address-address-address-)
 - [`computeTwoWayAveragePrice(struct PriceLibrary.PriceObservation observation1, struct PriceLibrary.PriceObservation observation2)`](#PriceLibrary-computeTwoWayAveragePrice-struct-PriceLibrary-PriceObservation-struct-PriceLibrary-PriceObservation-)
 - [`computeAveragePrice(uint32 timestampStart, uint224 priceCumulativeStart, uint32 timestampEnd, uint224 priceCumulativeEnd)`](#PriceLibrary-computeAveragePrice-uint32-uint224-uint32-uint224-)
 - [`computeAverageTokenPrice(struct PriceLibrary.PriceObservation observation1, struct PriceLibrary.PriceObservation observation2)`](#PriceLibrary-computeAverageTokenPrice-struct-PriceLibrary-PriceObservation-struct-PriceLibrary-PriceObservation-)
@@ -18,7 +18,7 @@
 ## <a id='PriceLibrary-pairInitialized-address-address-address-'></a> `pairInitialized`
 
 ```
-function pairInitialized(address uniswapFactory, address token, address weth) returns (bool)
+function pairInitialized(address PancakeSwapFactory, address token, address weth) returns (bool)
 ```
 
 
@@ -29,7 +29,7 @@ function pairInitialized(address uniswapFactory, address token, address weth) re
 ## <a id='PriceLibrary-observePrice-address-address-address-'></a> `observePrice`
 
 ```
-function observePrice(address uniswapFactory, address tokenIn, address quoteToken) returns (uint32, uint224)
+function observePrice(address PancakeSwapFactory, address tokenIn, address quoteToken) returns (uint32, uint224)
 ```
 
 
