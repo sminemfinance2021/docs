@@ -12,7 +12,7 @@ Re-indexing involves selecting the top tokens from the pool's category and weigh
 
 ```
 constructor(
-  UniSwapV2PriceOracle oracle,
+  PancakeSwapV2PriceOracle oracle,
   address ndx,
   PoolFactory factory,
   DelegateCallProxyManager proxyManager
@@ -61,7 +61,7 @@ function emergencyExecuteSwapTokensForExactTokens(
 ```
 
 Emergency function that allows the dao to force a token sale
-through UniSwap. This exists in case of an emergency which demands
+through PancakeSwap. This exists in case of an emergency which demands
 immediate removal of a token.
 
 # Pool Deployment
@@ -72,7 +72,7 @@ immediate removal of a token.
 function prepareIndexPool(
   uint256 categoryID,
   uint256 indexSize,
-  uint256 initialWethValue,
+  uint256 initialBNBValue,
   string name,
   string symbol
 )
@@ -285,11 +285,11 @@ Compute the create2 address for a pool.
 function getInitialTokenWeightsAndBalances(
   uint256 categoryID,
   uint256 indexSize,
-  uint256 wethValue
+  uint256 wBNBValue
 ) returns (address[] tokens, uint96[] denormalizedWeights, uint256[] balances)
 ```
 
-Queries the top `indexSize` tokens in a category from the market _oracle, computes their relative weights by market cap square root and determines the weighted balance of each token to meet a specified total value in weth.
+Queries the top `indexSize` tokens in a category from the market _oracle, computes their relative weights by market cap square root and determines the weighted balance of each token to meet a specified total value in wBNB.
 
 ## `getInitialTokensAndBalances` 
 
@@ -297,7 +297,7 @@ Queries the top `indexSize` tokens in a category from the market _oracle, comput
 function getInitialTokensAndBalances(
   uint256 categoryID,
   uint256 indexSize,
-  uint256 wethValue
+  uint256 wBNBValue
 ) returns (address[] tokens, uint256[] balances)
 ```
 
@@ -313,8 +313,8 @@ function computeAverageMarketCap(
 ) returns (uint144 marketCap)
 ```
 
-Compute the average market cap of a token in WETH.
-Queries the average amount of ether that the total supply is worth
+Compute the average market cap of a token in WBNB.
+Queries the average amount of BNB that the total supply is worth
 using the recent moving average.
 
 ## `computeAverageMarketCaps` 
