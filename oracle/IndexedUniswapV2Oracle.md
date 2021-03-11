@@ -5,7 +5,7 @@
 
 
 # Functions:
-- [`constructor(address uniswapFactory, address weth)`](#SmindexPancakeSwapV2Oracle-constructor-address-address-)
+- [`constructor(address uniswapFactory, address wBNB)`](#SmindexPancakeSwapV2Oracle-constructor-address-address-)
 - [`updatePrice(address token)`](#SmindexPancakeSwapV2Oracle-updatePrice-address-)
 - [`updatePrices(address[] tokens)`](#SmindexPancakeSwapV2Oracle-updatePrices-address---)
 - [`hasPriceObservationInWindow(address token, uint256 priceKey)`](#SmindexPancakeSwapV2Oracle-hasPriceObservationInWindow-address-uint256-)
@@ -20,9 +20,9 @@
 - [`computeAverageTokenPrices(address[] tokens, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-computeAverageTokenPrices-address---uint256-uint256-)
 - [`computeAverageEthPrices(address[] tokens, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-computeAverageEthPrices-address---uint256-uint256-)
 - [`computeAverageEthForTokens(address token, uint256 tokenAmount, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-computeAverageEthForTokens-address-uint256-uint256-uint256-)
-- [`computeAverageTokensForEth(address token, uint256 wethAmount, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-computeAverageTokensForEth-address-uint256-uint256-uint256-)
+- [`computeAverageTokensForEth(address token, uint256 wBNBAmount, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-computeAverageTokensForEth-address-uint256-uint256-uint256-)
 - [`computeAverageEthForTokens(address[] tokens, uint256[] tokenAmounts, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-computeAverageEthForTokens-address---uint256---uint256-uint256-)
-- [`computeAverageTokensForEth(address[] tokens, uint256[] wethAmounts, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-computeAverageTokensForEth-address---uint256---uint256-uint256-)
+- [`computeAverageTokensForEth(address[] tokens, uint256[] wBNBAmounts, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-computeAverageTokensForEth-address---uint256---uint256-uint256-)
 - [`_getTwoWayPrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-_getTwoWayPrice-address-uint256-uint256-)
 - [`_getTokenPrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-_getTokenPrice-address-uint256-uint256-)
 - [`_getEthPrice(address token, uint256 minTimeElapsed, uint256 maxTimeElapsed)`](#SmindexPancakeSwapV2Oracle-_getEthPrice-address-uint256-uint256-)
@@ -30,7 +30,7 @@
 ## <a id='SmindexPancakeSwapV2Oracle-constructor-address-address-'></a> `constructor`
 
 ```
-function constructor(address uniswapFactory, address weth)
+function constructor(address uniswapFactory, address wBNB)
 ```
 
 ## <a id='SmindexPancakeSwapV2Oracle-updatePrice-address-'></a> `updatePrice`
