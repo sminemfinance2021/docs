@@ -4,4 +4,4 @@
 
 | Contract      | Link |
 | ----------- | ----------- |
-| SMIN | [0x700E5621259f8748eD1F4A4da9078FD087Df0573](https://bscscan.com/token/0x700E5621259f8748eD1F4A4da9078FD087Df0573) |
+| SMIN | [0xE09151c826307434861FcFeb1bEaFeD6c2Bc1F23](https://bscscan.com/token/0xE09151c826307434861FcFeb1bEaFeD6c2Bc1F23) |
